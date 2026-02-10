@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBar File Uploader v3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="uploader-container">
+        
+        <div class="upload-area" id="uploadArea">
+            <div class="icon-wrapper">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <h3>Drag & Drop Files Here</h3>
+            <p>or <span class="browse-btn" id="browseBtn">Browse Files</span></p>
+            <input type="file" id="fileInput" hidden>
+        </div>
+
+        <div class="progress-area" id="progressArea">
+            <div class="file-details">
+                <i class="fas fa-file-alt"></i>
+                <div class="details">
+                    <span class="name" id="fileName">image_01.png</span>
+                    <span class="size" id="fileSize">2.5 MB</span>
+                </div>
+            </div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="status-text" id="statusText">Uploading...</div>
+        </div>
+
+        <div class="uploaded-image-view" id="uploadedImageView">
+            <img src="" alt="Uploaded Image" id="uploadedImagePreview">
+            
+            <div class="success-msg">
+                <i class="fas fa-check-circle"></i> Uploaded Successfully!
+            </div>
+
+            <button class="remove-btn" id="removeBtn">
+                <i class="fas fa-trash-alt"></i> Remove Image
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
